@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: fit-content;
+
+            input,
+            select,
+            textarea,
+            button {
+                width: 200px;
+                padding: 10px;
+                border-radius: 7px;
+                outline: none;
+                border: 1px solid #c4c4c4;
+            }
+
+            button {
+                margin-top: 7px;
+                padding: 10px 30px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+            }
+
+            .error {
+                border-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        Errors : <b id="total">0</b>
+        Success : <b id="succes">0</b>
+    </center>
+
+    <center>
+        <h1>Form validation</h1>
+        <form name="login">
+            <div class="ame">
+                <input type="text" placeholder="name" name="name">
+                <p class="word">от 2 до 10 букв</p>
+            </div>
+
+            <div class="num">
+                <input type="number" placeholder="age" name="age">
+                <p class="num">Сколько тебе лет</p>
+            </div>
+
+            <div class="email">
+                <input type="email" placeholder="email" name="email">
+                <p class="em">Укажи свой Email</p>
+            </div>
+            <select name="language">
+                <option value="not">not selected</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+            </select>
+            <button class="add">add</button>
+        </form>
+
+
+    </center>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Congratulations <b id="name"></b></h1>
+            <p></p>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
